@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: black;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 20%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: black;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+
+}
+
+#Home {background-color: #EAF6F6;}
+#AboutMe {background-color: #EAF6F6;}
+#Education {background-color: #EAF6F6;}
+#Gallery {background-color: #EAF6F6;}
+#Contacts {background-color: #EAF6F6;}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, '#EAF6F6')">Home</button>
+<button class="tablink" onclick="openPage('AboutMe', this, '#EAF6F6')" id="defaultOpen">About me</button>
+<button class="tablink" onclick="openPage('Education', this, '#EAF6F6')"> Education</button>
+<button class="tablink" onclick="openPage('Gallery', this, '#EAF6F6')">Gallery</button>
+<button class="tablink" onclick="openPage('Contacts', this, '#EAF6F6')">Contacts</button>
+
+<div id="Home" class="tabcontent">
+   <h3>Home</h3>
+   <img style="border-radius: 150%;" src="./images/sharad.jpg" width
+="200" height="200" />
+   <p>Name:Sharad Neupane</p>
+   <p>I am energetic, ambitious and currently studying diploma in IT at Business Leadership Institite.Natively i m from nepal and currently i live in
+      sydney, Australia. I m intrested in playing games(badmnton,football), travelling, chatting  etc. 
+   <p>Age:20</p>
+   <p>Date birth:27/03/2001</p>
+   <p>Nationality:Nepali</p>
+   
+   
+</div>
+
+<div id="AboutMe" class="tabcontent">
+  <h3>About Me</h3>
+  <p>Its me Sharad Neupane. I like travelling, listen music, playing games.
+     I am ambitious and highly organized. </p> 
+</div>
+
+<div id="Education" class="tabcontent">
+
+  <h3>Education</h3>
+<center>
+<table border=1>
+
+    <th>Degree</th>
+    <th>Year</th>
+    <th>Status</th>
+    <th>Institute</th>
+  </tr>
+  <tr>
+    <td>School Leaving Certificate(SLC)</td>
+    <td>2016</td>
+    <td>A grade</td>
+    <td>Shanti Deep English School</td>
+  </tr>
+  <tr>
+    <td>Higher Secondary Education</td>
+    <td>2018</td>
+    <td>A grade</td>
+    <td>Gyan Jyoti Secondary School</td>
+  </tr>
+  <tr>
+    <td>Diploma in Information Technology</td>
+    <td>2020</td>
+    <td>A Grade</td>
+    <td>Business Leadership Institute</td>
+  </tr>
+
+</table>
+</center>
+</div>
+
+<div id="Gallery" class="tabcontent">
+  <img src="./images/1.jpg" width="200" lenght="200"/>
+<img src="./images/2.jpg" width="200" lenght="300"/>
+<img src="./images/3.jpg" width="200" lenght="300"/>
+<img src="./images/4.jpg" width="200" lenght="300"/>
+<img src="./images/5.jpg" width="200" lenght="300"/>
+
+  <p></p>
+</div>
+
+<div id="Contacts" class="tabcontent">
+  <h3>Contacts</h3>
+  <p>Home address: 8/516 Railway Parade Hurstville,NSW Sydney</p>
+  <p>Mobile: +61449523031</p>
+  <p>Email:shreesharad48@gmail.com</p>
+  <p><a href="https://instagram.com/shreesharad48">Instagram</a></p>
+  <p><a href="https://facebook.com/shreesharad48">Facebook</a></p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
